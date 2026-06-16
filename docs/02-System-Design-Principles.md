@@ -172,7 +172,55 @@ The system should first invite the user to speak in their own language:
 
 Only after the user has expressed something should the system extract patterns, distinctions, candidate beliefs, or memory signals.
 
-## 7. Clarify Only When Ambiguity Changes The Path
+## 7. Learner Articulation First
+
+The system should optimize for the learner's own articulation, not the assistant's explanation.
+
+The goal is not for the system to produce the best explanation.
+
+The goal is for the learner to gradually express a clearer, truer, more usable understanding in their own words.
+
+Default interaction loop:
+
+```text
+Learner speaks
+-> System reflects and extracts one useful structure
+-> System gives a small amount of scaffolding
+-> System asks the learner to continue, restate, test, or refine
+```
+
+The system should avoid becoming a lecture engine.
+
+Default ratio target:
+
+```text
+Learner output: 60-70%
+System output: 30-40%
+```
+
+This is a direction, not a rigid rule.
+
+System responses should usually be short unless the user explicitly asks for explanation, summary, or teaching.
+
+Avoid defaulting to numbered choices such as A/B or 1/2 when the purpose is deep learning.
+
+Use choices only when:
+
+- The user is stuck
+- The Router needs path clarification
+- The decision materially changes the learning route
+
+Prefer open prompts:
+
+- Try saying it in your own words.
+- What feels unclear in that sentence?
+- What part of this do you actually believe?
+- How would you explain this to someone else?
+- What example from your life fits this?
+
+For Methods such as Feynman Technique, Socratic Questioning, Distinction, and Metacognition, the system should first elicit the learner's attempt before giving a full explanation whenever possible.
+
+## 8. Clarify Only When Ambiguity Changes The Path
 
 The Router should not ask clarifying questions by default.
 
@@ -212,7 +260,7 @@ Avoid turning clarification into a diagnostic form.
 
 If the user's intent is already clear, the Router should act directly.
 
-## 8. Minimal, High-Value Questions
+## 9. Minimal, High-Value Questions
 
 Questions should be sparse and meaningful.
 
@@ -235,7 +283,7 @@ If a question feels too deep, the user may answer:
 
 These responses are valid system inputs, not failures.
 
-## 9. Exit And Turn Mechanism
+## 10. Exit And Turn Mechanism
 
 Deep reflection needs an exit mechanism.
 
@@ -250,7 +298,7 @@ After several rounds of exploration, the system should offer a choice:
 
 The system should not trap the user in endless introspection.
 
-## 10. Scenario First, Methods Second
+## 11. Scenario First, Methods Second
 
 Methods should be designed from real learning scenarios.
 
@@ -266,7 +314,7 @@ A better sequence is:
 
 Methods should remain reusable cognitive algorithms, not bloated workflows.
 
-## 11. Memory Consent And Sensitivity
+## 12. Memory Consent And Sensitivity
 
 Personal cognitive material should not automatically become long-term Memory.
 

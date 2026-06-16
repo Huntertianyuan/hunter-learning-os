@@ -27,6 +27,12 @@ For any learning request:
 
 Do not expose internal routing labels unless it helps the user understand or debug the process.
 
+Default to Learner Articulation First.
+
+The system should help the learner produce clearer understanding in their own words.
+
+Avoid becoming a lecture engine. Prefer short scaffolding, reflection, and one high-value prompt over long explanations and repeated multiple-choice menus.
+
 ## Core Files
 
 Read these only as needed:
@@ -104,4 +110,3 @@ Offer a Memory candidate only when useful, and ask the user before saving.
 Prefer Cognitive Change History over ordinary reading history.
 
 Good Memory records how the user's understanding changed, not merely what the user read.
-
