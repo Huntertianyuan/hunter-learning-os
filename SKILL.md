@@ -1,7 +1,7 @@
 ---
 name: hunter-learning-os
 description: "Personal cognitive learning OS for deep understanding, review, synthesis, application, and reflection. Use when the user wants to learn from books, articles, videos, courses, notes, WeRead traces, concepts, or life questions in a way that turns information into long-term cognitive growth rather than simple summaries, note-taking, flashcards, or generic reading assistance."
-version: 0.1.0
+version: 0.1.1
 ---
 
 # Hunter Learning OS
