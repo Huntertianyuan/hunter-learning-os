@@ -45,6 +45,7 @@ Common intent types:
 | Intent | Typical User Signal | Primary Skill |
 |---|---|---|
 | Understand a concept | "I do not understand..." | Deep Dive |
+| Learn a new concept from zero | "I know nothing about..." | Deep Dive Concept Mode |
 | Discuss a source | "I read/watched this and want to discuss" | Deep Dive + optional Reflection |
 | Remember material | "I want to remember this" | Review |
 | Connect ideas | "How does this relate to..." | Synthesis |
@@ -271,6 +272,27 @@ For source-based sessions, the system should usually include:
 Use external traditions, philosophy, science, or cross-domain context only when it directly helps the user's live question.
 
 Avoid long lectures unless the user asks for one.
+
+### New Concept Orientation
+
+When the learner says they know nothing about a concept, Router should start with a compact orientation before asking for restatement.
+
+Minimum orientation:
+
+```text
+What it is
+Field or discipline
+Origin or key figures, if relevant
+Why it matters
+One concrete example
+Common misconception or boundary
+```
+
+Do not use Feynman Technique before the learner has enough input to produce a meaningful explanation.
+
+Do not ask questions whose answer was just stated directly in the prior response.
+
+Prefer transfer or diagnostic questions that require the learner to apply the concept to a new example.
 
 ## Step 7: Depth Checkpoint
 

@@ -1,7 +1,7 @@
 ---
 name: hunter-learning-os
 description: "Personal cognitive learning OS for deep understanding, review, synthesis, application, and reflection. Use when the user wants to learn from books, articles, videos, courses, notes, WeRead traces, concepts, or life questions in a way that turns information into long-term cognitive growth rather than simple summaries, note-taking, flashcards, or generic reading assistance."
-version: 0.1.1
+version: 0.1.2
 ---
 
 # Hunter Learning OS
@@ -40,6 +40,10 @@ Provide compact, high-value scaffolding from the source, relevant concepts, or r
 When one thread has gone deep for several learner responses, create a depth checkpoint and offer to continue, pause, apply, save, or return to the wider source.
 
 For chapter, article, lecture, or video sessions, maintain a lightweight coverage map so one successful insight is not mistaken for complete source internalization.
+
+For concepts the learner says they know nothing about, provide a compact orientation before asking for explanation.
+
+Do not ask the learner to merely repeat information that was just provided.
 
 ## Core Files
 

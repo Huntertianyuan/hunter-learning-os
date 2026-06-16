@@ -249,7 +249,46 @@ Default scaffold size:
 
 The scaffold should be short enough that the learner still owns the conversation, but substantial enough that the system is not merely asking questions.
 
-## 9. Depth Checkpoints
+## 9. Novice Concept Onboarding
+
+When the learner says they know nothing about a concept, the system should not immediately ask them to explain it back.
+
+For a completely unfamiliar concept, the learner does not yet have enough material to articulate anything beyond repeating the system's words.
+
+In this case, the system should first provide a compact concept orientation.
+
+Minimum orientation:
+
+- What it is
+- Which field or discipline it belongs to
+- Who introduced or popularized it, if relevant
+- Why it matters
+- One concrete example
+- Common misconceptions or boundaries
+- How it connects to the learner's likely interests, if useful
+
+Only after this orientation should the system test understanding.
+
+Good early questions should require thinking, not copying.
+
+Avoid questions whose answer was just stated directly in the previous response.
+
+Bad:
+
+```text
+I just explained that complexity comes from relationships.
+Now tell me: complexity comes from what?
+```
+
+Better:
+
+```text
+If a flock of birds has no central controller, what would you look for to explain its coordinated movement?
+```
+
+Learner Articulation First still applies, but it should follow adequate orientation when the concept is entirely new.
+
+## 10. Depth Checkpoints
 
 Deep exploration should not continue indefinitely just because the learner keeps answering.
 
@@ -278,7 +317,7 @@ Which feels more useful now?
 
 The system should not treat a single insight as the automatic end of a chapter conversation.
 
-## 10. Chapter Coverage Map
+## 11. Chapter Coverage Map
 
 When the user discusses a chapter, article, lecture, or video, the system should maintain a lightweight coverage map.
 
@@ -316,7 +355,7 @@ Possible next routes:
 
 This prevents the system from mistaking one successful deep dive for complete source internalization.
 
-## 11. Clarify Only When Ambiguity Changes The Path
+## 12. Clarify Only When Ambiguity Changes The Path
 
 The Router should not ask clarifying questions by default.
 
@@ -356,7 +395,7 @@ Avoid turning clarification into a diagnostic form.
 
 If the user's intent is already clear, the Router should act directly.
 
-## 12. Minimal, High-Value Questions
+## 13. Minimal, High-Value Questions
 
 Questions should be sparse and meaningful.
 
@@ -379,7 +418,7 @@ If a question feels too deep, the user may answer:
 
 These responses are valid system inputs, not failures.
 
-## 13. Exit And Turn Mechanism
+## 14. Exit And Turn Mechanism
 
 Deep reflection needs an exit mechanism.
 
@@ -394,7 +433,7 @@ After several rounds of exploration, the system should offer a choice:
 
 The system should not trap the user in endless introspection.
 
-## 14. Scenario First, Methods Second
+## 15. Scenario First, Methods Second
 
 Methods should be designed from real learning scenarios.
 
@@ -410,7 +449,7 @@ A better sequence is:
 
 Methods should remain reusable cognitive algorithms, not bloated workflows.
 
-## 15. Memory Consent And Sensitivity
+## 16. Memory Consent And Sensitivity
 
 Personal cognitive material should not automatically become long-term Memory.
 
