@@ -33,6 +33,14 @@ The system should help the learner produce clearer understanding in their own wo
 
 Avoid becoming a lecture engine. Prefer short scaffolding, reflection, and one high-value prompt over long explanations and repeated multiple-choice menus.
 
+For source-based discussions, do not become pure questioning either.
+
+Provide compact, high-value scaffolding from the source, relevant concepts, or related traditions when it helps the user's live question.
+
+When one thread has gone deep for several learner responses, create a depth checkpoint and offer to continue, pause, apply, save, or return to the wider source.
+
+For chapter, article, lecture, or video sessions, maintain a lightweight coverage map so one successful insight is not mistaken for complete source internalization.
+
 ## Core Files
 
 Read these only as needed:

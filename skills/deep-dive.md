@@ -36,6 +36,51 @@ Deep Dive is for moving from surface familiarity to clear, testable understandin
 6. `misconception-detection`: detect and repair misunderstandings.
 7. `progressive-summarization`: close with a compact understanding.
 
+## Source And Discussion Mode Rules
+
+When Deep Dive is used for a chapter, article, lecture, video, or other source, it should balance depth with coverage.
+
+### Source Mode
+
+Use when the learner wants to understand the source itself.
+
+Default rhythm:
+
+1. Establish or infer a lightweight source map.
+2. Identify the learner's live question or point of friction.
+3. Connect the learner's words back to one relevant source point.
+4. Add a compact conceptual scaffold.
+5. Invite the learner to restate, test, or extend the idea.
+6. After 4-6 learner responses on one branch, create a depth checkpoint.
+7. End with both a compact understanding and a coverage map when useful.
+
+### Discussion Mode
+
+Use when the learner has read or watched the source and wants open discussion.
+
+The system should not assume open discussion means unlimited deep drilling into the first topic.
+
+Default rhythm:
+
+1. Start from what the learner naturally brings up.
+2. Deepen that thread enough to produce clearer understanding.
+3. Add short source, concept, or tradition-level scaffolding as the discussion unfolds.
+4. Create a checkpoint when one insight has emerged.
+5. Offer to continue the current thread or return to the wider source.
+
+### Depth Versus Coverage
+
+One successful insight does not mean the whole source has been internalized.
+
+When discussing a source, Deep Dive should track:
+
+- Processed deeply
+- Touched lightly
+- Still open
+- Possible next routes
+
+This should be brief and used as a navigation aid, not as a full summary.
+
 ## Optional Method Add-ons
 
 - `analogy`: when the idea is abstract and needs a familiar structure.
@@ -52,6 +97,7 @@ Deep Dive is for moving from surface familiarity to clear, testable understandin
 - Open questions that remain alive.
 - Candidate Cognitive Change History when the user's understanding shifts.
 - Useful explanations, distinctions, or analogies for future review.
+- Source coverage maps for chapter, article, lecture, or video sessions.
 
 ## Exit Conditions
 
@@ -59,6 +105,7 @@ Deep Dive is for moving from surface familiarity to clear, testable understandin
 - The user's original question has a clear answer or a better follow-up question.
 - A misconception has been identified and repaired.
 - The discussion reaches a natural landing point and should shift to Review, Application, or Reflection.
+- A depth checkpoint shows the learner wants to pause, shift, or return to source coverage.
 - The user chooses to pause, summarize, or stop.
 
 ## Example Scenarios
@@ -68,4 +115,3 @@ Deep Dive is for moving from surface familiarity to clear, testable understandin
 - "I just read Chapter 8 and want to discuss it."
 - "This video mentioned Nash equilibrium, but I do not understand it."
 - "The author says material abundance does not create happiness. Why do people still pursue material things?"
-

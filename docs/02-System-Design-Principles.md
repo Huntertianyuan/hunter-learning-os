@@ -220,7 +220,103 @@ Prefer open prompts:
 
 For Methods such as Feynman Technique, Socratic Questioning, Distinction, and Metacognition, the system should first elicit the learner's attempt before giving a full explanation whenever possible.
 
-## 8. Clarify Only When Ambiguity Changes The Path
+## 8. Short, High-Value Knowledge Scaffolding
+
+Learner articulation first does not mean the system should provide almost no knowledge.
+
+The system should avoid two failure modes:
+
+- Lecture mode: the system explains too much and the learner becomes passive.
+- Pure questioning mode: the system asks too much and the learner receives too little source, concept, or tradition-level support.
+
+For source-based learning, each meaningful learner response should usually receive a compact scaffold before the next prompt.
+
+Useful scaffolds may include:
+
+- A relevant source point from the current chapter, article, video, or passage
+- A key concept or distinction from the source
+- A brief connection to a related tradition, field, or theory
+- A concrete example that clarifies the user's own words
+- A boundary check that prevents overgeneralization
+
+Default scaffold size:
+
+```text
+1 source/conceptual connection
++ 1 small clarification or distinction
++ 1 open prompt back to the learner
+```
+
+The scaffold should be short enough that the learner still owns the conversation, but substantial enough that the system is not merely asking questions.
+
+## 9. Depth Checkpoints
+
+Deep exploration should not continue indefinitely just because the learner keeps answering.
+
+When a conversation has gone several rounds into one branch, the system should create a checkpoint.
+
+Default checkpoint timing:
+
+- After 4-6 learner responses on one thread
+- When a meaningful insight appears
+- When the learner seems uncertain, tired, repetitive, or compliant
+- Before generating a Memory candidate for a source-based session
+
+A checkpoint should briefly name:
+
+- What has been understood so far
+- Whether the current thread is worth continuing
+- What other routes are available
+
+Example:
+
+```text
+We have gone fairly deep into the material-responsibility-anxiety thread.
+We can keep going, or we can zoom back out to the chapter and see what other points matter.
+Which feels more useful now?
+```
+
+The system should not treat a single insight as the automatic end of a chapter conversation.
+
+## 10. Chapter Coverage Map
+
+When the user discusses a chapter, article, lecture, or video, the system should maintain a lightweight coverage map.
+
+The map is not a full summary. It is a navigation aid.
+
+It helps the learner see:
+
+- Which part of the source has been deeply processed
+- Which important parts remain untouched
+- Which parts connect to the learner's own questions
+- Which branch should be explored next
+
+At the end of a source-based session, the system should usually provide a short coverage map before or alongside any Memory candidate.
+
+Example:
+
+```text
+Processed deeply:
+- Material pursuit, safety, responsibility, anxiety, impermanence
+
+Touched lightly:
+- Attachment and the fading of stimulation
+
+Still open:
+- Ignorance and habitual patterns
+- Dualistic perception
+- Resting/abiding
+- Practice implications
+
+Possible next routes:
+- Continue the personal responsibility thread
+- Return to the chapter's core argument
+- Pick one untouched concept
+```
+
+This prevents the system from mistaking one successful deep dive for complete source internalization.
+
+## 11. Clarify Only When Ambiguity Changes The Path
 
 The Router should not ask clarifying questions by default.
 
@@ -260,7 +356,7 @@ Avoid turning clarification into a diagnostic form.
 
 If the user's intent is already clear, the Router should act directly.
 
-## 9. Minimal, High-Value Questions
+## 12. Minimal, High-Value Questions
 
 Questions should be sparse and meaningful.
 
@@ -283,7 +379,7 @@ If a question feels too deep, the user may answer:
 
 These responses are valid system inputs, not failures.
 
-## 10. Exit And Turn Mechanism
+## 13. Exit And Turn Mechanism
 
 Deep reflection needs an exit mechanism.
 
@@ -298,7 +394,7 @@ After several rounds of exploration, the system should offer a choice:
 
 The system should not trap the user in endless introspection.
 
-## 11. Scenario First, Methods Second
+## 14. Scenario First, Methods Second
 
 Methods should be designed from real learning scenarios.
 
@@ -314,7 +410,7 @@ A better sequence is:
 
 Methods should remain reusable cognitive algorithms, not bloated workflows.
 
-## 12. Memory Consent And Sensitivity
+## 15. Memory Consent And Sensitivity
 
 Personal cognitive material should not automatically become long-term Memory.
 

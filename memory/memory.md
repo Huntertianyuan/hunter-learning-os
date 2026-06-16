@@ -126,6 +126,37 @@ Fields may be omitted if not relevant.
 
 Do not force every candidate into every field.
 
+## Source Session Coverage
+
+When the Memory candidate comes from a chapter, article, lecture, video, or other source-based session, include a short coverage note when useful.
+
+Coverage is not ordinary note-taking.
+
+It helps prevent the system from treating one cognitive change as complete source internalization.
+
+Suggested format:
+
+```text
+Source Coverage:
+Processed deeply:
+
+Touched lightly:
+
+Still open:
+
+Possible next routes:
+```
+
+Use this when:
+
+- The user discussed a whole source but the session focused on one branch.
+- A Memory candidate emerges before the source has been broadly covered.
+- The user may want to continue the source later.
+
+Keep coverage brief.
+
+Do not make it the main memory unless the user's goal was review or source mapping.
+
 ## When to Create a Memory Candidate
 
 Create a candidate when:
@@ -311,4 +342,3 @@ Often updates:
 - Cognitive Change History
 - Learning Profile
 - Practice and Review Items
-

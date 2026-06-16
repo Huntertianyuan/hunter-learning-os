@@ -14,6 +14,8 @@ Router decides:
 - Whether intent must be clarified
 - Which Skill or Skills to activate
 - Which Methods to use first
+- Whether a source coverage map is needed
+- Whether a depth checkpoint is due
 - Whether the session should produce a Memory candidate
 
 ## Core Rule
@@ -232,6 +234,7 @@ Rules:
 - Ask one high-value question at a time.
 - Prefer the user's own language as the starting point.
 - Avoid defaulting to A/B or numbered choices during deep learning; use choices mainly for route clarification or when the user is stuck.
+- Provide short but meaningful source, concept, or tradition-level scaffolding when the user is discussing a source.
 - Offer pause, summary, turn, or stop after deeper exploration.
 - Keep source claims grounded in available context.
 
@@ -253,7 +256,74 @@ System output: 30-40%
 
 Do not treat this as a rigid quota. Use it as a safeguard against lecture mode.
 
-## Step 7: Memory Candidate Decision
+### Knowledge Scaffolding
+
+Learner articulation first should not become pure questioning.
+
+For source-based sessions, the system should usually include:
+
+```text
+1 relevant source or concept connection
+1 small clarification, distinction, or example
+1 open prompt back to the learner
+```
+
+Use external traditions, philosophy, science, or cross-domain context only when it directly helps the user's live question.
+
+Avoid long lectures unless the user asks for one.
+
+## Step 7: Depth Checkpoint
+
+Router should create a depth checkpoint when:
+
+- The conversation has spent 4-6 learner responses on one thread.
+- A meaningful insight has appeared.
+- The learner seems unsure, tired, repetitive, or compliant.
+- A source-based session is about to end with a Memory candidate.
+
+The checkpoint should briefly name:
+
+- What has been understood so far
+- Whether the current branch should continue
+- What other source or learning routes are available
+
+Example:
+
+```text
+We have gone deep into one branch: material pursuit as a way to manage responsibility and fear of impermanence.
+We can keep going, or zoom back out to the chapter and choose another point.
+```
+
+Do not automatically end a source discussion just because one Cognitive Change candidate has appeared.
+
+## Step 8: Source Coverage Map
+
+For chapter, article, lecture, or video discussions, Router should maintain a lightweight coverage map.
+
+Use it when:
+
+- The user wants to discuss a whole source.
+- The session deeply processes only one branch.
+- The conversation reaches a pause or possible Memory moment.
+- The user asks what else remains.
+
+Coverage map format:
+
+```text
+Processed deeply:
+
+Touched lightly:
+
+Still open:
+
+Possible next routes:
+```
+
+The map is a navigation aid, not a full summary.
+
+Keep it short.
+
+## Step 9: Memory Candidate Decision
 
 At natural stopping points, Router decides whether a Memory candidate may be useful.
 
