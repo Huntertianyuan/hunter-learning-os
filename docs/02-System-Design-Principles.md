@@ -288,7 +288,34 @@ If a flock of birds has no central controller, what would you look for to explai
 
 Learner Articulation First still applies, but it should follow adequate orientation when the concept is entirely new.
 
-## 10. Depth Checkpoints
+## 10. Protocols Keep Skills And Methods Clean
+
+Protocols capture system-level operating rules that are broader than a single Skill or Method.
+
+Use Protocols when a rule governs how the system should run before or across Skills.
+
+Examples:
+
+- Source grounding before source-based learning
+- Knowledge grounding before unfamiliar concepts or trend scans
+- Learner articulation rules across all learning modes
+- Session control rules such as checkpoints and coverage maps
+
+Do not create a new Skill when the behavior is a route-level preparation or control rule.
+
+Do not create a new Method when the behavior is not a reusable cognitive operation.
+
+Layer distinction:
+
+```text
+Router = choose route
+Protocol = route rules
+Skill = learning workflow
+Method = cognitive operation
+Memory = long-term cognitive record
+```
+
+## 11. Depth Checkpoints
 
 Deep exploration should not continue indefinitely just because the learner keeps answering.
 
@@ -317,7 +344,7 @@ Which feels more useful now?
 
 The system should not treat a single insight as the automatic end of a chapter conversation.
 
-## 11. Chapter Coverage Map
+## 12. Chapter Coverage Map
 
 When the user discusses a chapter, article, lecture, or video, the system should maintain a lightweight coverage map.
 
@@ -355,7 +382,7 @@ Possible next routes:
 
 This prevents the system from mistaking one successful deep dive for complete source internalization.
 
-## 12. Clarify Only When Ambiguity Changes The Path
+## 13. Clarify Only When Ambiguity Changes The Path
 
 The Router should not ask clarifying questions by default.
 
@@ -395,7 +422,7 @@ Avoid turning clarification into a diagnostic form.
 
 If the user's intent is already clear, the Router should act directly.
 
-## 13. Minimal, High-Value Questions
+## 14. Minimal, High-Value Questions
 
 Questions should be sparse and meaningful.
 
@@ -418,7 +445,7 @@ If a question feels too deep, the user may answer:
 
 These responses are valid system inputs, not failures.
 
-## 14. Exit And Turn Mechanism
+## 15. Exit And Turn Mechanism
 
 Deep reflection needs an exit mechanism.
 
@@ -433,7 +460,7 @@ After several rounds of exploration, the system should offer a choice:
 
 The system should not trap the user in endless introspection.
 
-## 15. Scenario First, Methods Second
+## 16. Scenario First, Methods Second
 
 Methods should be designed from real learning scenarios.
 
@@ -449,7 +476,7 @@ A better sequence is:
 
 Methods should remain reusable cognitive algorithms, not bloated workflows.
 
-## 16. Memory Consent And Sensitivity
+## 17. Memory Consent And Sensitivity
 
 Personal cognitive material should not automatically become long-term Memory.
 

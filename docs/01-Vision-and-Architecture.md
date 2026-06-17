@@ -97,11 +97,12 @@ The system should remember:
 
 ## 5. System Architecture
 
-Hunter Learning OS consists of four layers.
+Hunter Learning OS consists of five layers.
 
 ```text
 Learning OS
 |-- Router
+|-- Protocols
 |-- Skills
 |-- Methods
 `-- Memory
@@ -119,6 +120,8 @@ Router does not explain.
 
 Router decides:
 
+- Which entry type the request belongs to
+- Which Protocols should govern the session
 - Which Skill to activate
 - Which Methods to invoke
 - Which Memory to retrieve
@@ -126,7 +129,57 @@ Router decides:
 
 Router acts as the learning coordinator.
 
-## 7. Skills Layer
+## 7. Protocols Layer
+
+Purpose:
+
+Define system-level operating rules for common learning situations.
+
+Protocols are not Skills.
+
+Protocols are not Methods.
+
+They do not teach by themselves.
+
+They specify how a learning route should be grounded and controlled before and during Skill execution.
+
+Current V1 Protocols:
+
+### Source Grounding
+
+Purpose:
+
+Ground named books, chapters, articles, videos, notes, or reading traces before interpretation.
+
+### Knowledge Grounding
+
+Purpose:
+
+Orient unfamiliar concepts, recommend concepts for discovery, and ground trend scans with external sources when needed.
+
+### Learner Articulation
+
+Purpose:
+
+Keep the learner actively producing understanding without forcing empty repetition.
+
+### Session Control
+
+Purpose:
+
+Manage depth checkpoints, coverage maps, exits, and Memory candidate timing.
+
+Layer responsibilities:
+
+```text
+Router = choose route
+Protocol = route rules
+Skill = learning workflow
+Method = cognitive operation
+Memory = long-term cognitive record
+```
+
+## 8. Skills Layer
 
 Skills are user-facing learning workflows.
 
@@ -164,7 +217,7 @@ Purpose:
 
 Track cognitive growth, mental model changes, and learning progress.
 
-## 8. Methods Layer
+## 9. Methods Layer
 
 Methods are reusable cognitive algorithms.
 
@@ -273,7 +326,7 @@ Examples:
 - Inversion
 - Synthesis
 
-## 9. Memory Layer
+## 10. Memory Layer
 
 Memory is a first-class system component.
 
@@ -327,7 +380,7 @@ Connections across books.
 
 Connections across disciplines.
 
-## 10. Cognitive Profile
+## 11. Cognitive Profile
 
 The system should maintain a continuously evolving model of the learner.
 
@@ -343,7 +396,7 @@ Possible fields:
 
 The profile should evolve continuously.
 
-## 11. Example Learning Flow
+## 12. Example Learning Flow
 
 User:
 
@@ -379,7 +432,7 @@ Update:
 - Concept History
 - Cognitive Profile
 
-## 12. What This System Is NOT
+## 13. What This System Is NOT
 
 This system is not:
 
@@ -391,7 +444,7 @@ This system is not:
 
 It is a cognitive growth system.
 
-## 13. Long-Term Vision
+## 14. Long-Term Vision
 
 The system should eventually become a personal learning partner that understands:
 
@@ -404,7 +457,7 @@ The final goal is not knowledge acquisition.
 
 The final goal is cognitive transformation.
 
-## 14. Current Development Stage
+## 15. Current Development Stage
 
 Current focus:
 

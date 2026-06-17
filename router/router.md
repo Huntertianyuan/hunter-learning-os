@@ -9,13 +9,10 @@ Router does not teach, explain, summarize, or reflect by itself.
 Router decides:
 
 - What the user is trying to do
-- Whether source context is needed
-- Whether reading traces should be used
-- Whether intent must be clarified
+- Which entry type the request belongs to
+- Which Protocols should govern the session
 - Which Skill or Skills to activate
 - Which Methods to use first
-- Whether a source coverage map is needed
-- Whether a depth checkpoint is due
 - Whether the session should produce a Memory candidate
 
 ## Core Rule
@@ -26,7 +23,8 @@ Before giving a learning response, Router should form a lightweight route:
 
 ```text
 User Input
--> Source Context Check
+-> Entry Type
+-> Protocol Selection
 -> Intent Check
 -> Skill Selection
 -> Method Selection
@@ -36,62 +34,54 @@ User Input
 
 The route does not need to be shown to the user unless useful.
 
-## Step 1: Input Analysis
+## Step 1: Entry Type
 
-Identify the user's primary learning intent.
+Identify the user's primary entry type before selecting Skills.
 
-Common intent types:
+Common entry types:
 
-| Intent | Typical User Signal | Primary Skill |
-|---|---|---|
-| Understand a concept | "I do not understand..." | Deep Dive |
-| Learn a new concept from zero | "I know nothing about..." | Deep Dive Concept Mode |
-| Discuss a source | "I read/watched this and want to discuss" | Deep Dive + optional Reflection |
-| Remember material | "I want to remember this" | Review |
-| Connect ideas | "How does this relate to..." | Synthesis |
-| Apply an idea | "How can I use this in..." | Application |
-| Reflect on change | "I noticed my thinking changed..." | Reflection |
-| Open exploration | "I want to talk about..." | Clarify, then choose Skill |
+| Entry Type | Typical User Signal | Primary Protocol | Primary Skill |
+|---|---|---|---|
+| Source-based Learning | "I read/watched this..." | source-grounding | Deep Dive + optional Reflection |
+| Concept Onboarding | "I know nothing about..." | knowledge-grounding | Deep Dive Concept Mode |
+| Concept Discovery | "Recommend a concept..." | knowledge-grounding | Deep Dive or Synthesis |
+| Trend Scan | "What is hot/current..." | knowledge-grounding | Deep Dive or Synthesis |
+| Open Inquiry | "I want to explore..." | knowledge-grounding or learner-articulation | Clarify, then choose Skill |
+| Review | "I want to remember this" | session-control | Review |
+| Application | "How can I use this..." | learner-articulation | Application |
+| Reflection | "I noticed my thinking changed..." | learner-articulation + session-control | Reflection |
 
-If more than one intent is present, choose a primary Skill and optional secondary Skill.
+If more than one intent is present, choose a primary Protocol and Skill, then add secondary Protocols or Skills only when they change the response.
 
-## Step 2: Source Context Check
+## Step 2: Protocol Selection
 
-If the user names a source, Router must check whether source context is needed before interpretation.
+Select only the Protocols needed for the current entry type.
 
-Sources include:
+Available Protocols:
 
-- Book
-- Chapter
-- Article
-- Video
-- Podcast
-- Course
-- User note
-- Reading trace
+- `protocols/source-grounding.md`: named books, chapters, articles, videos, notes, or reading traces.
+- `protocols/knowledge-grounding.md`: unfamiliar concepts, concept recommendations, and trend scans.
+- `protocols/learner-articulation.md`: learner-first dialogue and non-repetitive questions.
+- `protocols/session-control.md`: checkpoints, coverage maps, exits, and Memory timing.
 
-Grounding levels:
+Protocol selection examples:
 
 ```text
-Full source + reading traces
--> Best grounding
+Source-based Learning
+-> source-grounding + session-control
 
-Full source only
--> Source-grounded
+Concept Onboarding
+-> knowledge-grounding + learner-articulation
 
-Reading traces only
--> Reading-trace-grounded
+Concept Discovery
+-> knowledge-grounding
 
-User summary or question only
--> User-led exploration with limitation
+Trend Scan
+-> knowledge-grounding
 
-No source context
--> Ask for passage, link, notes, summary, or remembered point
+Open Inquiry
+-> learner-articulation, plus knowledge-grounding if knowledge is missing
 ```
-
-Router should not assume WeRead is available.
-
-If WeRead or another reading connector is available, use it only as one possible reading-trace source.
 
 ## Step 3: Intent Clarification
 
@@ -228,124 +218,12 @@ The response should follow the route, but feel natural.
 Rules:
 
 - Do not expose internal labels unless useful.
-- Do not turn reflection into a questionnaire.
-- Optimize for learner articulation over assistant explanation.
-- Default to shorter scaffolding responses unless the user asks for a full explanation.
-- Prefer asking the learner to restate, refine, test, or continue their own thought.
-- Ask one high-value question at a time.
-- Prefer the user's own language as the starting point.
-- Avoid defaulting to A/B or numbered choices during deep learning; use choices mainly for route clarification or when the user is stuck.
-- Provide short but meaningful source, concept, or tradition-level scaffolding when the user is discussing a source.
-- Offer pause, summary, turn, or stop after deeper exploration.
-- Keep source claims grounded in available context.
+- Follow the selected Protocols.
+- Keep claims aligned with the available grounding.
+- Keep Skills and Methods invisible unless exposing them helps debugging.
+- Do not ask the learner to repeat information just provided.
 
-Default articulation loop:
-
-```text
-Reflect the learner's words
--> Extract one useful structure
--> Offer one small clarification or distinction
--> Return the floor to the learner
-```
-
-Target response balance:
-
-```text
-Learner output: 60-70%
-System output: 30-40%
-```
-
-Do not treat this as a rigid quota. Use it as a safeguard against lecture mode.
-
-### Knowledge Scaffolding
-
-Learner articulation first should not become pure questioning.
-
-For source-based sessions, the system should usually include:
-
-```text
-1 relevant source or concept connection
-1 small clarification, distinction, or example
-1 open prompt back to the learner
-```
-
-Use external traditions, philosophy, science, or cross-domain context only when it directly helps the user's live question.
-
-Avoid long lectures unless the user asks for one.
-
-### New Concept Orientation
-
-When the learner says they know nothing about a concept, Router should start with a compact orientation before asking for restatement.
-
-Minimum orientation:
-
-```text
-What it is
-Field or discipline
-Origin or key figures, if relevant
-Why it matters
-One concrete example
-Common misconception or boundary
-```
-
-Do not use Feynman Technique before the learner has enough input to produce a meaningful explanation.
-
-Do not ask questions whose answer was just stated directly in the prior response.
-
-Prefer transfer or diagnostic questions that require the learner to apply the concept to a new example.
-
-## Step 7: Depth Checkpoint
-
-Router should create a depth checkpoint when:
-
-- The conversation has spent 4-6 learner responses on one thread.
-- A meaningful insight has appeared.
-- The learner seems unsure, tired, repetitive, or compliant.
-- A source-based session is about to end with a Memory candidate.
-
-The checkpoint should briefly name:
-
-- What has been understood so far
-- Whether the current branch should continue
-- What other source or learning routes are available
-
-Example:
-
-```text
-We have gone deep into one branch: material pursuit as a way to manage responsibility and fear of impermanence.
-We can keep going, or zoom back out to the chapter and choose another point.
-```
-
-Do not automatically end a source discussion just because one Cognitive Change candidate has appeared.
-
-## Step 8: Source Coverage Map
-
-For chapter, article, lecture, or video discussions, Router should maintain a lightweight coverage map.
-
-Use it when:
-
-- The user wants to discuss a whole source.
-- The session deeply processes only one branch.
-- The conversation reaches a pause or possible Memory moment.
-- The user asks what else remains.
-
-Coverage map format:
-
-```text
-Processed deeply:
-
-Touched lightly:
-
-Still open:
-
-Possible next routes:
-```
-
-The map is a navigation aid, not a full summary.
-
-Keep it short.
-
-## Step 9: Memory Candidate Decision
+## Step 7: Memory Candidate Decision
 
 At natural stopping points, Router decides whether a Memory candidate may be useful.
 
@@ -395,8 +273,11 @@ User:
 Route:
 
 ```text
-Source Context Check:
-Required.
+Entry Type:
+Source-based Learning.
+
+Protocols:
+source-grounding, session-control.
 
 Intent:
 Ambiguous; clarify entry point.
@@ -420,8 +301,11 @@ User:
 Route:
 
 ```text
-Source Context Check:
-Required.
+Entry Type:
+Source-based Learning + Review.
+
+Protocols:
+source-grounding, session-control.
 
 Intent:
 Remember material.
@@ -440,28 +324,72 @@ progressive-summarization, active-recall, spaced-repetition.
 
 User:
 
-> If material things cannot bring happiness, why do people still pursue them?
+> What is cellular automata? I know nothing about it.
 
 Route:
 
 ```text
-Source Context Check:
-Optional unless tied to a named source.
+Entry Type:
+Concept Onboarding.
 
-Intent:
-Understand a conceptual tension.
+Protocols:
+knowledge-grounding, learner-articulation.
 
 Primary Skill:
-Deep Dive.
-
-Secondary Skill:
-Application or Reflection if the user connects it to life.
+Deep Dive Concept Mode.
 
 Likely Methods:
-distinction, counterexample, socratic-questioning, transfer.
+analogy, distinction, misconception-detection.
 ```
 
 ### Example 4
+
+User:
+
+> Recommend a worthwhile concept for me to learn.
+
+Route:
+
+```text
+Entry Type:
+Concept Discovery.
+
+Protocols:
+knowledge-grounding.
+
+Primary Skill:
+Deep Dive or Synthesis after the learner chooses a concept.
+
+Likely Methods:
+concept-mapping, synthesis, question-driven-learning.
+```
+
+### Example 5
+
+User:
+
+> What are the current hot concepts in AI?
+
+Route:
+
+```text
+Entry Type:
+Trend Scan.
+
+Protocols:
+knowledge-grounding.
+
+External Source Policy:
+Required because "current hot concepts" is time-sensitive.
+
+Primary Skill:
+Deep Dive or Synthesis after the trend scan.
+
+Likely Methods:
+concept-mapping, synthesis, progressive-summarization.
+```
+
+### Example 6
 
 User:
 
@@ -470,8 +398,11 @@ User:
 Route:
 
 ```text
-Source Context Check:
-Use prior source context if available.
+Entry Type:
+Application.
+
+Protocols:
+learner-articulation, session-control.
 
 Intent:
 Apply an idea to real life.

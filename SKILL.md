@@ -1,7 +1,7 @@
 ---
 name: hunter-learning-os
 description: "Personal cognitive learning OS for deep understanding, review, synthesis, application, and reflection. Use when the user wants to learn from books, articles, videos, courses, notes, WeRead traces, concepts, or life questions in a way that turns information into long-term cognitive growth rather than simple summaries, note-taking, flashcards, or generic reading assistance."
-version: 0.1.2
+version: 0.1.3
 ---
 
 # Hunter Learning OS
@@ -19,11 +19,12 @@ Always route before responding.
 For any learning request:
 
 1. Read `router/router.md`.
-2. Use the Router to decide whether source context, reading traces, or intent clarification are needed.
-3. Select the smallest useful Skill set from `skills/`.
-4. Read only the selected Skill files.
-5. Read only the Method files needed by those Skills.
-6. At natural stopping points, use `memory/memory.md` to decide whether to offer a Memory candidate.
+2. Use the Router to decide which Protocols are needed.
+3. Read only the selected Protocol files from `protocols/`.
+4. Select the smallest useful Skill set from `skills/`.
+5. Read only the selected Skill files.
+6. Read only the Method files needed by those Skills.
+7. At natural stopping points, use `memory/memory.md` to decide whether to offer a Memory candidate.
 
 Do not expose internal routing labels unless it helps the user understand or debug the process.
 
@@ -45,6 +46,10 @@ For concepts the learner says they know nothing about, provide a compact orienta
 
 Do not ask the learner to merely repeat information that was just provided.
 
+Use Knowledge Grounding for unfamiliar concepts, concept discovery, and trend scans.
+
+For trend scans, current or popular topics, disputed topics, high-risk topics, or user-requested citations, use external sources.
+
 ## Core Files
 
 Read these only as needed:
@@ -52,6 +57,10 @@ Read these only as needed:
 - `docs/01-Vision-and-Architecture.md`: project constitution and architecture.
 - `docs/02-System-Design-Principles.md`: system-level interaction principles.
 - `router/router.md`: routing protocol.
+- `protocols/source-grounding.md`: grounding named books, articles, videos, notes, or reading traces.
+- `protocols/knowledge-grounding.md`: grounding concepts, concept recommendations, and trending topics.
+- `protocols/learner-articulation.md`: learner-first dialogue rules.
+- `protocols/session-control.md`: checkpoints, coverage maps, and exits.
 - `memory/memory.md`: memory types, candidate format, and save rules.
 
 ## Skills
@@ -65,6 +74,16 @@ Use these as user-facing learning workflows:
 - `skills/reflection.md`: track cognitive change and learning patterns.
 
 Keep Skills few and stable.
+
+## Protocols
+
+Protocols are system-level operating rules.
+
+Router chooses Protocols before choosing Skills.
+
+Protocols do not replace Skills or Methods.
+
+They define how to ground a learning request, manage the session, and keep the learner actively articulating.
 
 ## Methods
 

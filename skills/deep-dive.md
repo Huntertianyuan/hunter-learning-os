@@ -85,21 +85,23 @@ This should be brief and used as a navigation aid, not as a full summary.
 
 Use Concept Mode when the learner wants to understand a concept, theory, model, or technical term.
 
-If the learner is completely new to the concept, begin with orientation before testing articulation.
+If the learner is completely new to the concept, first use `protocols/knowledge-grounding.md` before testing articulation.
 
-### Novice Concept Orientation
+### Concept Orientation
 
-Minimum orientation:
+Deep Dive should receive or establish a concept map from Knowledge Grounding:
 
-1. Plain definition: what the concept means.
-2. Field: which discipline or area uses it.
-3. Origin: who introduced or popularized it, if relevant.
-4. Core mechanism: how it works.
-5. Importance: why anyone cares.
-6. Concrete example: one simple case.
-7. Boundaries: what it is not.
+- what it is
+- what it is not
+- field or discipline
+- core mechanism
+- canonical example
+- why it matters
+- common misconceptions or boundaries
 
-After orientation, ask a question that requires application, comparison, or boundary testing.
+External source policy belongs to Knowledge Grounding, not Deep Dive.
+
+After orientation, Deep Dive asks questions that require application, comparison, or boundary testing.
 
 Avoid asking the learner to merely repeat the previous explanation.
 
