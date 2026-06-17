@@ -169,6 +169,12 @@ Purpose:
 
 Manage depth checkpoints, coverage maps, exits, and Memory candidate timing.
 
+### Learning Closure
+
+Purpose:
+
+Close meaningful sessions with explanation checks, application bridges, Memory candidates, review prompts, or coverage maps.
+
 Layer responsibilities:
 
 ```text

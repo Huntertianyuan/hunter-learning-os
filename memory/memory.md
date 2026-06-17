@@ -119,12 +119,53 @@ Open Question:
 
 Practice or Review:
 
+Review Prompts:
+
 Save Recommendation:
 ```
 
 Fields may be omitted if not relevant.
 
 Do not force every candidate into every field.
+
+## Review Prompts
+
+Memory candidates may include review prompts when the material is worth retaining.
+
+Review prompts should test understanding rather than wording.
+
+Useful prompt types:
+
+- Explain the concept simply.
+- Give a real-life example.
+- Distinguish it from a nearby concept.
+- Explain how it changed the learner's view of a familiar phenomenon.
+
+Example:
+
+```text
+Review Prompts:
+- Explain emergence to a smart 12-year-old.
+- Give one everyday example of emergence.
+- How is emergence similar to and different from dependent origination?
+- What did the "self as smoke" image help clarify?
+```
+
+Review prompts can support future Active Recall, Spaced Repetition, Concept History, or monthly review.
+
+## Memory Future Use
+
+When generating a Memory candidate, briefly indicate how it may be used later:
+
+- recall
+- review
+- synthesis
+- application
+- monthly reflection
+
+Do not make every Memory candidate long.
+
+Use future-use notes only when they add practical value.
 
 ## Source Session Coverage
 

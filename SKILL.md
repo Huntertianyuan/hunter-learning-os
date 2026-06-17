@@ -1,7 +1,7 @@
 ---
 name: hunter-learning-os
 description: "Personal cognitive learning OS for deep understanding, review, synthesis, application, and reflection. Use when the user wants to learn from books, articles, videos, courses, notes, WeRead traces, concepts, or life questions in a way that turns information into long-term cognitive growth rather than simple summaries, note-taking, flashcards, or generic reading assistance."
-version: 0.1.3
+version: 0.1.4
 ---
 
 # Hunter Learning OS
@@ -50,6 +50,10 @@ Use Knowledge Grounding for unfamiliar concepts, concept discovery, and trend sc
 
 For trend scans, current or popular topics, disputed topics, high-risk topics, or user-requested citations, use external sources.
 
+Use Learning Closure after meaningful concept, source, synthesis, application, or reflection sessions.
+
+Learning Closure should help decide whether to run a simple explanation check, bridge to real life, create Memory, generate review prompts, or show remaining coverage.
+
 ## Core Files
 
 Read these only as needed:
@@ -61,6 +65,7 @@ Read these only as needed:
 - `protocols/knowledge-grounding.md`: grounding concepts, concept recommendations, and trending topics.
 - `protocols/learner-articulation.md`: learner-first dialogue rules.
 - `protocols/session-control.md`: checkpoints, coverage maps, and exits.
+- `protocols/learning-closure.md`: closing learning sessions with explanation checks, application bridges, Memory, and review prompts.
 - `memory/memory.md`: memory types, candidate format, and save rules.
 
 ## Skills

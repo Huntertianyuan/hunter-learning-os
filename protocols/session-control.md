@@ -63,6 +63,28 @@ Offer exit options when useful:
 - offer a Memory candidate
 - stop
 
+## Learning Closure Checkpoint
+
+Before ending a substantial learning session, consider `protocols/learning-closure.md`.
+
+Use Learning Closure when the session produced:
+
+- a grounded concept understanding
+- a meaningful source insight
+- a useful synthesis
+- a real-life application
+- a candidate cognitive change
+
+Learning Closure should decide whether to add:
+
+- Feynman Check
+- Application Bridge
+- Memory Candidate
+- Review Prompt
+- Coverage Map
+
+Do not force closure for short factual exchanges.
+
 ## Memory Boundary
 
 Do not automatically save personal cognitive material.

@@ -300,6 +300,7 @@ Examples:
 - Knowledge grounding before unfamiliar concepts or trend scans
 - Learner articulation rules across all learning modes
 - Session control rules such as checkpoints and coverage maps
+- Learning closure rules for explanation checks, application bridges, Memory, and review prompts
 
 Do not create a new Skill when the behavior is a route-level preparation or control rule.
 

@@ -13,6 +13,7 @@ Review is for making understanding durable. It turns a concept, chapter, article
 - The user has already understood the material well enough to be tested.
 - A prior discussion produced insights worth retaining.
 - The user wants to check what they still remember.
+- Another Skill creates review prompts through Learning Closure.
 
 ## When NOT to Use
 
@@ -37,6 +38,25 @@ Review is for making understanding durable. It turns a concept, chapter, article
 - `distinction`: when similar concepts are easily confused.
 - `practice-design`: when retention should be reinforced through a real-life observation or task.
 
+## Review Handoff
+
+Other Skills may create lightweight review prompts without switching into a full Review session.
+
+Use this when a concept, insight, or synthesis is worth revisiting later.
+
+Review handoff format:
+
+```text
+Review Prompts:
+- Explain the concept simply.
+- Give one real-life example.
+- Distinguish it from a nearby idea.
+```
+
+If the user asks to review now, run the full Review Skill.
+
+If the user asks to remember later, suggest a small spaced repetition schedule.
+
 ## Memory Outputs
 
 - Review prompts.
@@ -59,4 +79,3 @@ Review is for making understanding durable. It turns a concept, chapter, article
 - "Help me review the key ideas from this article."
 - "I keep forgetting Python syntax."
 - "Can we make this into review questions?"
-

@@ -13,6 +13,7 @@ Router decides:
 - Which Protocols should govern the session
 - Which Skill or Skills to activate
 - Which Methods to use first
+- Whether learning closure is needed
 - Whether the session should produce a Memory candidate
 
 ## Core Rule
@@ -63,6 +64,7 @@ Available Protocols:
 - `protocols/knowledge-grounding.md`: unfamiliar concepts, concept recommendations, and trend scans.
 - `protocols/learner-articulation.md`: learner-first dialogue and non-repetitive questions.
 - `protocols/session-control.md`: checkpoints, coverage maps, exits, and Memory timing.
+- `protocols/learning-closure.md`: explanation checks, application bridges, Memory candidates, and review prompts at natural stopping points.
 
 Protocol selection examples:
 
@@ -71,7 +73,7 @@ Source-based Learning
 -> source-grounding + session-control
 
 Concept Onboarding
--> knowledge-grounding + learner-articulation
+-> knowledge-grounding + learner-articulation + learning-closure when the concept has been explored
 
 Concept Discovery
 -> knowledge-grounding
@@ -82,6 +84,8 @@ Trend Scan
 Open Inquiry
 -> learner-articulation, plus knowledge-grounding if knowledge is missing
 ```
+
+Use `learning-closure` when a meaningful session is ending or when the learner asks to pause, summarize, remember, review, or close the thread.
 
 ## Step 3: Intent Clarification
 

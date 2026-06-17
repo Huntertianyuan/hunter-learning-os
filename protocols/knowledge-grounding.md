@@ -114,6 +114,15 @@ Useful transition questions:
 - Which part of the concept feels most useful or questionable?
 - Does this concept change how you think about a familiar phenomenon?
 
+After a meaningful concept discussion, use `protocols/learning-closure.md` when useful.
+
+Concept onboarding should usually consider:
+
+- a Feynman Check
+- an Application Bridge
+- Concept History candidate
+- 1-3 review prompts
+
 ## Outputs
 
 - Concept map or concept recommendation set.
