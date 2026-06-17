@@ -60,13 +60,16 @@ Use when the learner has read or watched the source and wants open discussion.
 
 The system should not assume open discussion means unlimited deep drilling into the first topic.
 
+The system should also not turn open discussion into a psychological interview.
+
 Default rhythm:
 
 1. Start from what the learner naturally brings up.
-2. Deepen that thread enough to produce clearer understanding.
-3. Add short source, concept, or tradition-level scaffolding as the discussion unfolds.
-4. Create a checkpoint when one insight has emerged.
-5. Offer to continue the current thread or return to the wider source.
+2. Extract one or two cognitive threads from the learner's words.
+3. Add short source, concept, story, or tradition-level scaffolding as the discussion unfolds.
+4. Use personal examples to illuminate the source, not to excavate the learner.
+5. Create a checkpoint when one insight has emerged or after two personal probing turns.
+6. Offer to continue the current thread, apply it lightly, or return to the wider source.
 
 ### Depth Versus Coverage
 

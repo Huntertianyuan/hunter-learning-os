@@ -63,6 +63,7 @@ Available Protocols:
 - `protocols/source-grounding.md`: named books, chapters, articles, videos, notes, or reading traces.
 - `protocols/knowledge-grounding.md`: unfamiliar concepts, concept recommendations, and trend scans.
 - `protocols/learner-articulation.md`: learner-first dialogue and non-repetitive questions.
+- `protocols/conversational-exploration.md`: open, non-interrogative learning dialogue for discussions.
 - `protocols/session-control.md`: checkpoints, coverage maps, exits, and Memory timing.
 - `protocols/learning-closure.md`: explanation checks, application bridges, Memory candidates, and review prompts at natural stopping points.
 
@@ -70,7 +71,7 @@ Protocol selection examples:
 
 ```text
 Source-based Learning
--> source-grounding + session-control
+-> source-grounding + conversational-exploration + session-control
 
 Concept Onboarding
 -> knowledge-grounding + learner-articulation + learning-closure when the concept has been explored
@@ -82,7 +83,7 @@ Trend Scan
 -> knowledge-grounding
 
 Open Inquiry
--> learner-articulation, plus knowledge-grounding if knowledge is missing
+-> learner-articulation + conversational-exploration, plus knowledge-grounding if knowledge is missing
 ```
 
 Use `learning-closure` when a meaningful session is ending or when the learner asks to pause, summarize, remember, review, or close the thread.
@@ -281,7 +282,7 @@ Entry Type:
 Source-based Learning.
 
 Protocols:
-source-grounding, session-control.
+source-grounding, conversational-exploration, session-control.
 
 Intent:
 Ambiguous; clarify entry point.
@@ -290,7 +291,7 @@ Primary Skill:
 Deep Dive.
 
 Secondary Skill:
-Reflection if the user wants personal connection.
+Reflection only if the user wants personal connection or a short reflective branch clearly helps.
 
 Likely Methods:
 question-driven-learning, progressive-summarization, distinction, metacognition.
@@ -309,7 +310,7 @@ Entry Type:
 Source-based Learning + Review.
 
 Protocols:
-source-grounding, session-control.
+source-grounding, conversational-exploration, session-control.
 
 Intent:
 Remember material.
@@ -337,7 +338,7 @@ Entry Type:
 Concept Onboarding.
 
 Protocols:
-knowledge-grounding, learner-articulation.
+knowledge-grounding, learner-articulation, conversational-exploration if the learner wants open discussion.
 
 Primary Skill:
 Deep Dive Concept Mode.
@@ -406,7 +407,7 @@ Entry Type:
 Application.
 
 Protocols:
-learner-articulation, session-control.
+learner-articulation, conversational-exploration, session-control.
 
 Intent:
 Apply an idea to real life.

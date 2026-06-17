@@ -12,6 +12,8 @@ Create a checkpoint when:
 - a meaningful insight appears
 - the learner seems uncertain, tired, repetitive, or compliant
 - a source-based session is about to produce a Memory candidate
+- the system has asked two consecutive personal probing questions
+- the learner says the session feels like a test, interview, or psychological analysis
 
 Checkpoint format:
 
@@ -62,6 +64,20 @@ Offer exit options when useful:
 - create a review item
 - offer a Memory candidate
 - stop
+
+## Anti-Probing Rule
+
+In source-based or concept-based learning, personal reflection is a branch, not the default destination.
+
+Do not ask more than two consecutive questions about the learner's motives, fears, hidden beliefs, identity, family patterns, or emotional roots unless the learner explicitly asks for that depth.
+
+After a short reflective branch, return to one of:
+
+- the source map
+- the concept map
+- a concrete example
+- practical application
+- review or explanation check
 
 ## Learning Closure Checkpoint
 

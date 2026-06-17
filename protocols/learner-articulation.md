@@ -15,6 +15,8 @@ The system should help the learner produce clearer understanding in their own wo
 - Ask one high-value question at a time.
 - Avoid A/B or numbered choices during deep learning unless the learner is stuck or route clarification is needed.
 - Do not ask the learner to merely repeat information just provided.
+- Prefer open invitations when the learner is exploring rather than solving a narrow problem.
+- Let the learner tell stories, impressions, and partial thoughts; extract structure from that material.
 
 ## Default Loop
 
@@ -22,7 +24,7 @@ The system should help the learner produce clearer understanding in their own wo
 Learner speaks
 -> System reflects and extracts one useful structure
 -> System gives compact scaffolding
--> System asks the learner to apply, test, refine, or extend
+-> System invites the learner to apply, test, refine, extend, or keep talking openly
 ```
 
 ## Question Quality
@@ -40,6 +42,12 @@ Better:
 
 ```text
 If a flock of birds has no central controller, what would you inspect to explain its coordinated movement?
+```
+
+For open learning conversations, an invitation may be better than a question:
+
+```text
+You can describe any everyday scene where this idea seems to appear. I will help connect it back to the source.
 ```
 
 ## Novice Exception

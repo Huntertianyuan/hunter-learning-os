@@ -163,6 +163,12 @@ Purpose:
 
 Keep the learner actively producing understanding without forcing empty repetition.
 
+### Conversational Exploration
+
+Purpose:
+
+Keep open discussions natural, non-interrogative, and oriented toward internalizing knowledge rather than psychological probing.
+
 ### Session Control
 
 Purpose:

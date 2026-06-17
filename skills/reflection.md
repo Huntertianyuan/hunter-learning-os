@@ -20,6 +20,7 @@ Reflection is for noticing how the learner's thinking changes over time.
 - The user primarily wants to remember material.
 - The user wants practical action more than self-observation.
 - Reflection would become intrusive, over-personal, or ruminative.
+- The learner wants to internalize a source or concept, not receive psychological counseling.
 - The user has signaled they do not want to go deeper.
 
 ## Default Method Sequence
@@ -54,6 +55,7 @@ Reflection is for noticing how the learner's thinking changes over time.
 - The conversation risks becoming too probing and should pause.
 - The user chooses to save, summarize, shift, or stop.
 - The reflection reveals a need for Deep Dive, Application, or Review.
+- Two consecutive personal probing questions have already been asked without explicit consent to continue.
 
 ## Example Scenarios
 
@@ -62,4 +64,3 @@ Reflection is for noticing how the learner's thinking changes over time.
 - "Can we summarize what changed in my understanding?"
 - "Why did this passage bother me so much?"
 - "Help me reflect on why I procrastinated today."
-
