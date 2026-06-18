@@ -6,6 +6,10 @@ Strengthen retention, recall, and retrieval of important learning.
 
 Review is for making understanding durable. It turns a concept, chapter, article, or prior discussion into recallable memory.
 
+Review can strengthen both knowledge and cognitive change.
+
+If a prior session produced knowledge without visible cognitive shift, review should focus on recalling the knowledge, source, distinctions, and examples.
+
 ## When to Use
 
 - The user says they want to remember something.
@@ -31,6 +35,55 @@ Review is for making understanding durable. It turns a concept, chapter, article
 4. `spaced-repetition`: suggest future review timing for important items.
 5. `interleaving`: mix related concepts when discrimination matters.
 
+## Knowledge Review Types
+
+Use these recall types for knowledge-oriented review:
+
+- Source recall: where the idea came from.
+- Content recall: what the idea means.
+- Distinction recall: how it differs from nearby ideas.
+- Application recall: how it appears in real life.
+
+Examples:
+
+```text
+Source recall:
+Where did we encounter the dirty window metaphor?
+
+Content recall:
+Can you describe the dirty window metaphor simply?
+
+Distinction recall:
+Is the dirty window exactly the same as habitual tendency, or is habitual tendency one kind of dirt?
+
+Application recall:
+Can you name one situation where a normal person looked like a threat through a dirty window?
+```
+
+## Recall Strength
+
+Score recall lightly after the learner answers:
+
+```text
+0 = not remembered
+1 = vaguely remembered
+2 = basically clear
+3 = clear and can give an example or application
+```
+
+Suggested interval:
+
+```text
+0 -> 1 day
+1 -> 3 days
+2 -> 7 days
+3 -> 14-30 days
+```
+
+If recall is weak, give a compact scaffold and shorten the review interval.
+
+If recall is strong, ask a harder distinction or application question and lengthen the interval.
+
 ## Optional Method Add-ons
 
 - `feynman-technique`: when recall should be tested through explanation.
@@ -51,11 +104,19 @@ Review Prompts:
 - Explain the concept simply.
 - Give one real-life example.
 - Distinguish it from a nearby idea.
+
+Recall Strength:
+Not yet tested.
+
+Suggested Interval:
+Initial review in 1-3 days if important.
 ```
 
 If the user asks to review now, run the full Review Skill.
 
 If the user asks to remember later, suggest a small spaced repetition schedule.
+
+If the user asks to review recent learning, prefer the Review Queue over inventing new questions from memory.
 
 ## Memory Outputs
 

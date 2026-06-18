@@ -1,7 +1,7 @@
 ---
 name: hunter-learning-os
 description: "Personal cognitive learning OS for deep understanding, review, synthesis, application, and reflection. Use when the user wants to learn from books, articles, videos, courses, notes, WeRead traces, concepts, or life questions in a way that turns information into long-term cognitive growth rather than simple summaries, note-taking, flashcards, or generic reading assistance."
-version: 0.1.5
+version: 0.1.6
 ---
 
 # Hunter Learning OS
@@ -60,6 +60,16 @@ Use Learning Closure after meaningful concept, source, synthesis, application, o
 
 Learning Closure should help decide whether to run a simple explanation check, bridge to real life, create Memory, generate review prompts, or show remaining coverage.
 
+Learning Closure should distinguish Knowledge Gain from Cognitive Gain.
+
+Knowledge improvement is a valid outcome even when no visible cognitive shift occurred.
+
+Do not invent Cognitive Gain to make a session look successful.
+
+When useful, create Review Queue items with recall strength and next interval guidance.
+
+Personal Memory should be saved only after confirmation, and should default to a private local Memory store rather than the public skill repository.
+
 ## Core Files
 
 Read these only as needed:
@@ -74,6 +84,7 @@ Read these only as needed:
 - `protocols/session-control.md`: checkpoints, coverage maps, and exits.
 - `protocols/learning-closure.md`: closing learning sessions with explanation checks, application bridges, Memory, and review prompts.
 - `memory/memory.md`: memory types, candidate format, and save rules.
+- `templates/`: reusable formats for effective feedback, memory save candidates, and review queue items.
 
 ## Skills
 
@@ -153,3 +164,9 @@ Offer a Memory candidate only when useful, and ask the user before saving.
 Prefer Cognitive Change History over ordinary reading history.
 
 Good Memory records how the user's understanding changed, not merely what the user read.
+
+Knowledge-only sessions may still create Concept History or Review Queue candidates.
+
+If personal Memory is saved, default private store:
+
+`/Users/tianyuan/Documents/工作系统/Hunter Learning OS Memory/`

@@ -15,6 +15,7 @@ Router decides:
 - Which Methods to use first
 - Whether learning closure is needed
 - Whether the session should produce a Memory candidate
+- Whether the session should produce effective feedback or review queue items
 
 ## Core Rule
 
@@ -31,6 +32,7 @@ User Input
 -> Method Selection
 -> Response
 -> Memory Candidate Decision
+-> Effective Feedback Decision
 ```
 
 The route does not need to be shown to the user unless useful.
@@ -234,6 +236,7 @@ At natural stopping points, Router decides whether a Memory candidate may be use
 
 Create a Memory candidate when:
 
+- Knowledge was clarified and is worth reviewing.
 - The user's understanding changed.
 - A misconception was corrected.
 - A recurring pattern appeared.
@@ -249,6 +252,10 @@ Memory candidate format:
 ```text
 Topic:
 
+Knowledge Gain:
+
+Cognitive Gain:
+
 Before:
 
 After:
@@ -260,12 +267,37 @@ Open Question:
 Practice or Review:
 ```
 
+Do not force Cognitive Gain.
+
+If only knowledge improved, route to Knowledge History or Review Queue instead of Cognitive Change History.
+
 Skip Memory candidate when:
 
 - The exchange was purely factual.
 - The user did not engage enough to show change.
 - The content is too private or sensitive to preserve.
 - The user wants to stop without summarizing.
+
+## Step 8: Effective Feedback Decision
+
+At meaningful stopping points, Router decides whether to produce effective feedback.
+
+Use effective feedback when:
+
+- The user asks to pause, end, save, review, or understand what was gained.
+- A source or concept discussion produced knowledge worth retaining.
+- A discussion produced cognitive change.
+- The learner may otherwise be unsure where the session output went.
+
+Effective feedback should separate:
+
+- Knowledge Gain
+- Cognitive Gain
+- Worth Saving
+- Review Queue
+- Future Use
+
+If no cognitive shift is visible, say so briefly and do not invent one.
 
 ## Example Routes
 

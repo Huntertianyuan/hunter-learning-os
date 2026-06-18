@@ -8,6 +8,10 @@ Learning Closure prevents a session from ending with only a pleasant insight or 
 
 It helps decide whether to test understanding, connect to life, create Memory, or prepare future review.
 
+It should also produce effective feedback when a session has enough substance to carry forward.
+
+Effective feedback separates what the learner learned from how the learner's thinking changed.
+
 ## When to Use
 
 - A concept has been sufficiently grounded and discussed.
@@ -91,6 +95,39 @@ Show:
 - useful connections
 - possible next routes
 
+### 6. Effective Feedback
+
+Use after meaningful learning sessions, especially when the learner asks to end, save, review, or understand what they gained.
+
+Default format:
+
+```text
+Knowledge Gain:
+- Concepts, source points, distinctions, examples, origins, or structures clarified.
+
+Cognitive Gain:
+- Changed understanding, changed frame, changed real-life interpretation, or changed attention.
+- If no visible shift occurred, say: "No clear Cognitive Gain yet."
+
+Worth Saving:
+- Memory Type:
+- Save Target:
+- Why it matters:
+
+Review Queue:
+- Recall prompt:
+- Recall type:
+- Recall strength:
+- Suggested interval:
+
+Future Use:
+- How this may help review, synthesis, application, or monthly reflection.
+```
+
+Do not force Cognitive Gain.
+
+If the session only clarified source content or concepts, record Knowledge Gain only and create knowledge review prompts.
+
 ## Default Closure By Session Type
 
 ### Concept Onboarding
@@ -101,13 +138,16 @@ Usually consider:
 - Application Bridge
 - Concept History candidate
 - 1-3 review prompts
+- Effective Feedback with Knowledge Gain first
 
 ### Source-based Learning
 
 Usually consider:
 
 - source coverage map
-- Cognitive Change candidate if understanding shifted
+- Effective Feedback
+- Knowledge Gain for source points discussed
+- Cognitive Change candidate only if understanding shifted
 - review prompts if retention matters
 
 ### Synthesis
@@ -117,6 +157,7 @@ Usually consider:
 - what connection became clearer
 - Idea Network candidate
 - boundary question to avoid flattening differences
+- Effective Feedback showing both connection learned and frame changed
 
 ### Application
 
@@ -125,6 +166,7 @@ Usually consider:
 - one concrete practice
 - follow-up review question
 - optional Practice and Review Item
+- Effective Feedback showing what knowledge became usable
 
 ### Reflection
 
@@ -133,6 +175,7 @@ Usually consider:
 - Cognitive Change candidate
 - open question
 - optional future check-in prompt
+- Effective Feedback, without inventing knowledge or cognitive gains
 
 ## Periodic Review Direction
 
@@ -149,11 +192,37 @@ Future weekly or monthly reviews should summarize:
 - practices tried
 - open questions
 
+Knowledge-only review items should be reviewed through active recall:
+
+- source recall
+- content recall
+- distinction recall
+- application recall
+
+Recall strength:
+
+```text
+0 = not remembered
+1 = vaguely remembered
+2 = basically clear
+3 = clear and can give an example or application
+```
+
+Suggested intervals:
+
+```text
+0 -> 1 day
+1 -> 3 days
+2 -> 7 days
+3 -> 14-30 days
+```
+
 ## Outputs
 
 - Closure checkpoint.
 - Simple explanation attempt or prompt.
 - Application bridge.
+- Effective feedback.
 - Memory candidate.
 - Review prompts.
 - Coverage map.

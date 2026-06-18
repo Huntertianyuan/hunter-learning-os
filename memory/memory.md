@@ -10,11 +10,19 @@ Memory tracks how the learner's understanding, questions, misconceptions, patter
 
 The core asset is Cognitive Change History.
 
+Knowledge History is also valuable.
+
+Some sessions improve knowledge without producing visible cognitive change.
+
 ## Core Rule
 
 Do not save personal cognitive material automatically.
 
 Generate a Memory candidate at natural stopping points, then ask the user whether to save it.
+
+Do not force cognitive change.
+
+If a session clarified knowledge but did not visibly change the learner's frame, create a Knowledge Gain or Review Queue candidate instead of a Cognitive Change History candidate.
 
 ## Memory Types
 
@@ -50,6 +58,19 @@ Use for:
 - Key distinctions
 - Open questions
 - Related examples
+
+### Knowledge History
+
+Tracks source-based or concept-based knowledge the learner has encountered and clarified.
+
+Use for:
+
+- Source points discussed
+- Chapter or article concepts
+- Examples and metaphors from sources
+- Concept origins or disciplinary placement
+- Distinctions learned
+- Knowledge that deserves review even without cognitive change
 
 ### Misconception History
 
@@ -100,6 +121,19 @@ Use for:
 - Real-life experiments
 - Future check-ins
 
+### Review Queue
+
+Tracks future recall prompts and interval guidance.
+
+Use for:
+
+- Knowledge recall prompts
+- Source recall prompts
+- Distinction recall prompts
+- Application recall prompts
+- Recall strength
+- Suggested next review interval
+
 ## Memory Candidate Format
 
 Use this format when a session may produce a memory:
@@ -108,6 +142,10 @@ Use this format when a session may produce a memory:
 Topic:
 
 Memory Type:
+
+Knowledge Gain:
+
+Cognitive Gain:
 
 Before:
 
@@ -121,12 +159,57 @@ Practice or Review:
 
 Review Prompts:
 
+Recall Strength:
+
+Review Interval:
+
 Save Recommendation:
 ```
 
 Fields may be omitted if not relevant.
 
 Do not force every candidate into every field.
+
+If `Cognitive Gain` is not visible, write:
+
+```text
+Cognitive Gain:
+No clear cognitive shift yet.
+```
+
+Then prefer `Knowledge History`, `Concept History`, or `Review Queue`.
+
+## Effective Feedback Candidate Format
+
+Use this format for end-of-session feedback:
+
+```text
+Topic:
+
+Knowledge Gain:
+- 
+
+Cognitive Gain:
+- 
+
+Worth Saving:
+- Memory Type:
+- Save Target:
+- Why it matters:
+
+Review Queue:
+- Recall Prompt:
+- Recall Type:
+- Recall Strength:
+- Suggested Interval:
+
+Future Use:
+- 
+```
+
+Keep it concise.
+
+A useful feedback item should tell the learner what was learned, what changed if anything, where it can be saved, how it can be reviewed, and why it may matter later.
 
 ## Review Prompts
 
@@ -136,6 +219,7 @@ Review prompts should test understanding rather than wording.
 
 Useful prompt types:
 
+- Recall the source.
 - Explain the concept simply.
 - Give a real-life example.
 - Distinguish it from a nearby concept.
@@ -152,6 +236,49 @@ Review Prompts:
 ```
 
 Review prompts can support future Active Recall, Spaced Repetition, Concept History, or monthly review.
+
+## Recall Strength And Review Interval
+
+Use this lightweight scale for Review Queue items:
+
+```text
+0 = not remembered
+1 = vaguely remembered
+2 = basically clear
+3 = clear and can give an example or application
+```
+
+Suggested intervals:
+
+```text
+0 -> 1 day
+1 -> 3 days
+2 -> 7 days
+3 -> 14-30 days
+```
+
+The interval is guidance, not an automated reminder.
+
+Hunter Learning OS should use the Review Queue when the learner asks to review recent learning.
+
+## Private Memory Store
+
+Personal Memory should default to a private local directory, not the public skill repository.
+
+Default path:
+
+```text
+/Users/tianyuan/Documents/工作系统/Hunter Learning OS Memory/
+```
+
+Suggested files:
+
+- `knowledge-history.md`
+- `cognitive-change-history.md`
+- `review-queue.md`
+- `session-index.md`
+
+The public skill repository should contain system rules and templates, not personal learning records.
 
 ## Memory Future Use
 
@@ -202,6 +329,7 @@ Do not make it the main memory unless the user's goal was review or source mappi
 
 Create a candidate when:
 
+- The learner clarified a source point or concept worth retaining.
 - The user's understanding changed.
 - A misconception was corrected.
 - A strong open question emerged.
@@ -221,6 +349,10 @@ Do not create a candidate when:
 - The response was only a quick clarification.
 - Saving would turn a passing emotion into an overfixed identity claim.
 
+Do not create a Cognitive Change candidate when the session produced only knowledge clarification.
+
+In that case, create Knowledge History or Review Queue candidates if useful.
+
 ## Save Rules
 
 Before saving personal Memory, ask for confirmation.
@@ -228,7 +360,7 @@ Before saving personal Memory, ask for confirmation.
 Good confirmation language:
 
 ```text
-This feels like a possible Cognitive Change record.
+This feels like a possible Memory item.
 Would you like me to save it, revise it, or leave it unsaved?
 ```
 
