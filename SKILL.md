@@ -1,7 +1,7 @@
 ---
 name: hunter-learning-os
 description: "Personal cognitive learning OS for deep understanding, review, synthesis, application, and reflection. Use when the user wants to learn from books, articles, videos, courses, notes, WeRead traces, concepts, or life questions in a way that turns information into long-term cognitive growth rather than simple summaries, note-taking, flashcards, or generic reading assistance."
-version: 0.1.7
+version: 0.1.8
 ---
 
 # Hunter Learning OS
@@ -169,4 +169,4 @@ Knowledge-only sessions may still create Concept History or Review Queue candida
 
 If personal Memory is saved, default private store:
 
-`/Users/tianyuan/Documents/工作系统/memory/hunter-learning-os/`
+`/Users/tianyuan/Documents/Codex工作台/工作系统/memory/hunter-learning-os/`

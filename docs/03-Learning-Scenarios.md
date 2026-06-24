@@ -79,7 +79,7 @@ The user said:
 
 The user had placed the EPUB file in:
 
-`/Users/tianyuan/Documents/Codex/Books/`
+`/Users/tianyuan/Documents/Codex工作台/学习系统/books/`
 
 The system located the book and confirmed that Chapter 8 maps to `index_split_008.html` inside the EPUB.
 
