@@ -268,7 +268,7 @@ Personal Memory should default to a private local directory, not the public skil
 Default path:
 
 ```text
-/Users/tianyuan/Documents/工作系统/Hunter Learning OS Memory/
+/Users/tianyuan/Documents/工作系统/memory/hunter-learning-os/
 ```
 
 Suggested files:
